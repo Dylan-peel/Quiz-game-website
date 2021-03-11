@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <title>{% block title%}{% endblock %}</title>
 </head>
+
 <body>
+    <div>
+    <a href = '/login'>Login</a>
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <h1>{{message}}</h1>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     {%block content%}{%endblock%}
+    <hr>
 </body>
 </html>
