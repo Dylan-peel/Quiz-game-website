@@ -7,8 +7,3 @@ class LoginForm(FlaskForm):
     passwd = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember user')
     sub = SubmitField('sign in')
-
-class QuestionForm(FlaskForm):
-    Question = StringField('Question', validators=[DataRequired()])
-    Answer = StringField('Answer', validators=[DataRequired()])
-    sub = SubmitField('Post question')

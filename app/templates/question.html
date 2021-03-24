@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{%block content%}
+<h1>Questions</h1>
+    {{form.hidden_tag()}}
+    <p>
+        {{form.Question.label}}<br>
+        {{form.Question(size=1000)}}
+    </p>
+    <p>
+        {{form.Answer.label}}<br>
+        {{form.Answer(size=500)}}
+    </p>
+    <p>{{ form.sub() }}</p>
+
