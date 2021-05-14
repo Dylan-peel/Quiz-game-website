@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {%block content%}
-<h1>Login</h1>
+<h1>Registration</h1>
 
 <form action="" method="post">
     {{ form.hidden_tag() }}
@@ -16,7 +16,10 @@
         {{ form.passwd.label }}<br>
         {{ form.passwd(size=32) }}
     </p>
-    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+    <p>
+        {{form.repeatpass.label}} <br>
+        {{form.repeatpass(size=32)}}
+    </p>
     <p>{{ form.sub() }}</p>
 </form>
 {% endblock %}
